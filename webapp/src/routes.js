@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { css } from '@emotion/core'
-import { Home } from './home'
+import { Home } from './home/home-page'
 
 function AppRouter () {
   return (
@@ -10,11 +10,11 @@ function AppRouter () {
         <nav css={navStyle}>
           <ul >
             <li>
-              <Link to='/'>Home</Link>
+              <Link to='/'>Divvy</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/another'>Another route</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <div className='main-content' css={contentStyle}>

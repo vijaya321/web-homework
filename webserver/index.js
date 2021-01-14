@@ -28,10 +28,11 @@ module.exports = function main (options, cb) {
   let serverClosing = false
 
   const MONGO_URI = 'mongodb://localhost:27017/graphql'
-
+   
   mongoose.Promise = global.Promise
   mongoose.connect(MONGO_URI, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   })
 
   // Setup error handling
@@ -65,7 +66,8 @@ module.exports = function main (options, cb) {
 
   // Template engine
   app.engine('html', ejs.renderFile)
-  app.set('views', path.join(__dirname, 'public'))
+  // app.set('views', path.join(__dirname, 'public'))
+  app.set('views', path.join(__dirname, 'views'))
   app.set('view engine', 'html')
 
   // Common middleware
