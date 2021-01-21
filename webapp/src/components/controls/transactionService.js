@@ -23,10 +23,10 @@ export function insertTransaction (createTransaction, formValues, credit, debit,
   }
 }
 
-export function deleteTransaction (deleteTransaction, index) {
-  try {
-    deleteTransaction({ variables: { user_id: 1 } })
-  } catch (e) {
-    console.log('error', e)
-  }
-}
+// export function deleteTransaction (deleteTransaction, index) {
+//   try {
+//     deleteTransaction({ variables: { user_id: 1 } })
+//   } catch (e) {
+//     console.log('error', e)
+//   }
+// }

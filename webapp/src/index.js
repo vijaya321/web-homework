@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import AppRouter from './routes'
 import { ApolloProvider } from '@apollo/client'
@@ -7,11 +7,9 @@ import { client } from './network/apollo-client'
 ReactDOM.render(
   (
     <div data-app-init=''>
-      <Suspense fallback={(<div>Loading...</div>)}>
-        <ApolloProvider client={client}>
-          <AppRouter />
-        </ApolloProvider>
-      </Suspense>
+      <ApolloProvider client={client}>
+        <AppRouter />
+      </ApolloProvider>
     </div>
   ),
   document.getElementById('react-app')

@@ -80,7 +80,6 @@ const headCells = [
 ]
 
 export default function Transactions () {
-//   const { TblContainer } = useTable()
   const classes = useStyles()
   const [recordForEdit, setRecordForEdit] = useState(null)
   const [romanNumeral, setRomanNumeral] = useState(false)
