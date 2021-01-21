@@ -124,7 +124,7 @@ export default function Transactions () {
   const openInPopup = (e, item) => {
     e.preventDefault()
     setRecordForEdit(item)
-    window.alert(item)
+    // window.alert(item)
     setOpenPopup(true)
   }
   return (

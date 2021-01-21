@@ -14,7 +14,7 @@ export function insertTransaction (createTransaction, formValues, credit, debit,
   const amount = parseFloat(formValues.amount)
   const category = formValues.category
   const date = formValues.date
-  window.alert(date)
+
   try {
     createTransaction({ variables: { id: id, user_id: userId, description: description, merchant_id: merchantId, debit: debit, credit: credit, amount: amount, category: category, transaction_date: date } })
     setOpenPopup(false)
